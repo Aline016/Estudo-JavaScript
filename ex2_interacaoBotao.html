@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 2: Interagindo com um botão</title>
+    <Style>
+        body{
+            background-color: black;
+            color:white;
+            font: normal 15pt arial;
+        }
+    </Style>
+</head>
+<body>
+    <h1>Segundo exercício: Interação com Botão</h1>
+    <button id="btnClique">Clique aqui</button>
+
+    <Script> // Inicio javaScript
+        
+        //Constante do botão que recebe o id do botão 
+        const botao = document.getElementById("btnClique")
+        //o botão fica esperando o clique do botão para chamar a função alerta
+        botao.addEventListener("click", fncalerta)
+
+        //Função alerta
+       function fncalerta(){
+        //mostra um alerta quando o botão for clicado
+        alert("Você clicou no botão!")
+       }
+    </Script>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 4: Trabalhando com dados 2</title>
+
+    <style>
+        body{
+            background-color: brown;
+            color:white;
+            font: normal 18pt arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Trabalhando com dados 2</h1>
+
+    <button id="btnComecar">Clique para começar</button>
+
+    <p id="resultado">Aqui vai aparecer o resultado</p>
+
+    <Script>
+        //Constante que recebe o id do botão
+        const botao = document.getElementById("btnComecar")
+        //Botão fica aguardando o clique, então chama a função nome
+        botao.addEventListener("click", fncNome)
+
+        function fncNome(){
+            //Recebe o conteudo do prompt
+           var nome =  window.prompt("Qual é o seu nome?")
+            //Mudar o conteudo do paragrafo selecionado para o nome, e fomata-lo como negrito
+            // PARA QUE A FORMATAÇÃO FUNCIONE TEM QUE USAR INNERHTML
+           window.document.getElementById("resultado").innerHTML = `Olá  <strong> ${nome} </strong>, é um prazer conhece-lo`
+        }
+    </Script>
+
+</body>
+</html>

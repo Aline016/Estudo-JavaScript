@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 9 - Contador de cliques    </title>
+
+    <style>
+        body{
+            background-color: bisque;
+            color: black;
+            font: normal 12pt arial;
+          }
+
+        button{
+            font-size: 12pt;
+            padding: 30pt;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Contador de cliques</h1>
+    <button id="btnClique">Clique aqui</button>
+    <button id="btnZerar">Zerar contador</button>
+    <p id="p1"></p>
+
+    <script>
+        //Definir as variaveis que receberão o conteudo dos botões 
+        var botaoClique = document.getElementById("btnClique");
+        var botaoZerar = document.getElementById("btnZerar");
+        //Definir o contador
+        var contador = 0;
+        //Quando o botão clique for precionado chamar a função contClique
+        botaoClique.addEventListener("click", contClique);
+        //Quando o botão zerar for precionado chamar a função zerarCont
+        botaoZerar.addEventListener("click", zerarCont)
+
+        
+        function contClique(){
+            //Contador recebe um clique a mais 
+            contador+= 1;
+            //Exibir na tela o valor do contador
+            document.getElementById("p1").innerHTML= `O contador está com <mark>${contador}</mark> cliques`;
+        }
+
+        function zerarCont(){
+            //Zerar contador 
+            contador = 0;
+            //Limpar a tela
+            document.getElementById("p1").innerHTML = ``;
+        }
+    </script>
+    
+</body>
+</html>

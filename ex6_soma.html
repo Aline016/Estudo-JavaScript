@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 6: Somando dois números</title>
+    <style>
+        body{
+            background-color: bisque;
+            color: white;
+            font: normal 18pt arial;
+        }
+
+        button{
+            font-size: 12pt;
+            padding: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exercício 6: Somando dois números</h1>
+    <button id="btnSoma">Iniciando soma</button>
+    <p id="p1">O resultado vem aqui...</p>
+
+   <script>
+        //Constante que recebe o id do botão
+        const botao = document.getElementById("btnSoma");
+        //Botão fica aguardando o clique, então chama a função soma
+        botao.addEventListener("click", fncSoma);
+
+        function fncSoma(){
+            //Recebe os dois números pelo prompt
+            var num1 = window.prompt("Informe o primeiro número: ");
+            var num2 = window.prompt("Informe o segundo número: ");
+            //Soma os dois número num1 com num2 depois de converter o conteúdo para float
+            var resultado = Number.parseFloat(num1) + Number.parseFloat(num2)
+            //Exibir o resultado da soma 
+            document.getElementById("p1").innerHTML = `A soma de  <mark>${num1}</mark> e <mark>${num2}</mark> é ${resultado}`
+        }
+   </script>
+
+</body>
+</html>

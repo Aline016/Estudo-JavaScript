@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 5: Trabalhando com números </title>
+
+    <style>
+        body{
+            background-color: black;
+            color:whitesmoke;
+            font: normal 18pt arial;
+        }
+        button{
+            font-size: 12pt;
+            padding: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exercício 5: Trabalhando com números</h1>
+
+    <button id="btnComecar">Clique para calcular</button>
+
+    <p id="resultado">O resultado vem aqui...</p>
+
+    <script>
+         //Constante que recebe o id do botão
+        const botao = document.getElementById("btnComecar")
+        //Botão fica aguardando o clique, então chama a função soma
+        botao.addEventListener("click", fncSoma)
+
+        function fncSoma(){
+            //Receber o número do prompt
+            var num = window.prompt("Informe o número inicial: ")
+            //Dobrar o número recebido após depois de converter o conteúdo para float
+            var dobro = Number.parseFloat(num) * 2
+            //Pegar a metade do número recebido depois de converter o conteúdo para float
+            var metade =Number.parseFloat(num) / 2
+            //Exibir os resultados obtidos 
+            document.getElementById("resultado").innerHTML = `O dobro de ${num} é ${dobro} e a metade é ${metade}`
+        }
+    </script>
+</body>
+</html>

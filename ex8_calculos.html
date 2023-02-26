@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 8: Vários calculos</title>
+    <style>
+        body{
+            background-color: greenyellow;
+            color:white;
+            font: normal 18pt arial;
+        }
+        button{
+            font-size: 12pt;
+            padding: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exercício 8: Vários calculos</h1>
+    <button id="btnCalculo">Clique aqui para calcular</button>
+    <section id="result">
+        <p >O resultado virá aqui...</p>
+    </section>
+   
+
+    <script>
+        const botao = document.getElementById("btnCalculo");
+
+        botao.addEventListener("click", fncCalculo);
+
+        function fncCalculo(){
+           
+            let num = Number(window.prompt("Informe o número: "));
+
+            let resultado = document.querySelector('section#result');
+
+            resultado.innerHTML = `<p>O número a ser análisado é: ${num}</p><hr>`
+            resultado.innerHTML += `<p>O seu valor absoluto é: ${Math.abs(num)}</p>` 
+            resultado.innerHTML += `<p>A sua parte inteira é: ${Math.trunc(num)} </p>`
+            resultado.innerHTML += `<p>O valor inteiro mais próximo é: ${Math.round(num)} </p>`
+            resultado.innerHTML += `<p>A sua raiz quadrada é: ${Math.sqrt(num)} </p>`
+            resultado.innerHTML += `<p>A sua raiz cubica é: ${Math.cbrt(num)} </p>`
+            resultado.innerHTML += `<p>O valor de ${num}<sup>2</sup> é: ${Math.pow(num,2)} </p>`
+            resultado.innerHTML += `<p>O valor de ${num}<sup>3</sup> é: ${Math.pow(num,3)} </p>`
+
+
+        }
+    </script>
+</body>
+</html>

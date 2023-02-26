@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 7: Média do aluno</title>
+
+    <style>
+        body{
+            background-color: blue;
+            color: white;
+            font: normal 18pt arial;
+        }
+
+        button{
+            font-size: 12pt;
+            padding: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exercício 7: Média do aluno</h1>
+    <button id="btnMedia">Calcular média</button>
+    <p id="p1">O resultado vem aqui...</p>
+
+    <script>
+        //Constante que recebe o id do botão
+        const botao = document.getElementById("btnMedia");
+        //Botão fica aguardando o clique, então chama a função média
+        botao.addEventListener("click", fncMedia);
+
+        function fncMedia(){
+            //Receber o nome do aluno
+            var nome = window.prompt("Qual o nome do aluno?");
+            //Receber a primeira nota do aluno
+            var nota1 = window.prompt(`Qual a primeira nota de ${nome}?`)
+            //Receber a segunda nota do aluno
+            var nota2 = window.prompt(`Além de ${nota1}, qual a outra nota de ${nome}?`)
+            //Receber a média das duas notas depois de converter o conteudo para float
+            var resultado = (Number.parseFloat(nota1) + Number.parseFloat(nota2)) / 2
+            //Exibir as variaveis
+            document.getElementById("p1").innerHTML = `Calculando a média final de  <mark>${nome}</mark> 
+            <br> As notas obtidas foram <mark>${nota1}</mark> e <mark>${nota2}</mark> <br> 
+            A média final é <mark>${resultado}</mark>`
+        }
+    </script>
+
+</body>
+</html>
