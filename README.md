@@ -1,3 +1,3 @@
 # Estudo-JavaScript
 
-Exercicíos básicos sobre meu começo dos estudos de JavaScript
+Exercicíos básicos sobre o começo dos meus estudos de JavaScript
